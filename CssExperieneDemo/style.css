@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+    align-items: center;
+    background-color: gray;
+}
+.blue{
+    display: none;
+}
+.row h1 {
+    display: flex;
+    font-size: 60px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+  }
+  .animation-active{
+    animation: 
+    typing 2s steps(32,end) forwards,
+    backspace 1s 4s steps(14, end) forwards,
+    againForward 1s 5s steps(14, end) forwards,
+    removeAll 2s 7s steps(32, end) forwards,
+    blink-caret .50s step-end infinite;
+  }
+  /* The typing effect */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+    99%{
+        color: black;
+    }
+    100%{
+        color: red;
+    }
+  }
+  @keyframes backspace {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 70%;
+      color: black;
+    }
+    99%{
+        color: black;
+    }
+  }
+  
+  @keyframes againForward {
+    from {
+      width: 70%;
+    }
+    to {
+      width: 100%;
+    }
+    99%{
+        color: black;
+    }
+    100%{
+        color: blue;
+    }
+  }
+  
+  @keyframes removeAll {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+    99%{
+      color: black;  
+    }
+  }
+  @keyframes redColor {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  /* The typewriter cursor effect */
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  
+  
+  
