@@ -13,7 +13,7 @@
       event.preventDefault();
       let thisForm = this;
 
-      displayError(thisForm, 'This functionality is not avaliable. please user your local email service. note (by filling out the fields and submit will auto open your local email service.)');
+      displayError(thisForm, "Oops! It seems our server is currently taking a coffee break ☕. Don't worry,Redirecting you to your default email application with the  pre-filled details. We're keen to hear from you!");
       
       
       let formData = new FormData( thisForm );
